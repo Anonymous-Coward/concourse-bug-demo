@@ -1,0 +1,12 @@
+- name: repo
+  type: git
+  source:
+    branch: master
+    uri: https://github.com/Anonymous-Coward/concourse-bug-demo.git
+
+jobs:
+- name: bug-demo
+  plan:
+  - get: repo
+  - task: execute-task
+    file: repo/task.yaml

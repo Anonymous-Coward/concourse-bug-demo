@@ -1,7 +1,10 @@
 # params:
 #    resource: resource in which to run unit tests
 #    directory: directory inside resource in which to run unit tests
-image_resource: alpine
+image_resource:
+  type: registry-image
+  source:
+    repository: alpine
 platform: linux
 inputs:
 - name: repo

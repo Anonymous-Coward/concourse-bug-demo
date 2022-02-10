@@ -1,17 +1,12 @@
 # params:
 #    resource: resource in which to run unit tests
 #    directory: directory inside resource in which to run unit tests
-image: alpine
-config:
-  platform: linux
-  inputs:
-  - name: repo
-  run:
-    path: sh
-    args:
-    - "-c"
-    - "echo 'Executing task.'"
-on_failure:
-  put: notify
-  params:
-    alert_type: failed
+image_resource: alpine
+platform: linux
+inputs:
+- name: repo
+run:
+  path: sh
+  args:
+  - "-c"
+  - "echo 'Executing task.'"

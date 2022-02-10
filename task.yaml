@@ -11,7 +11,7 @@ config:
     args:
     - "-c"
     - "echo 'Executing task.'"
-on_failure: failure_notification
+on_failure:
   put: notify
   params:
     alert_type: failed
